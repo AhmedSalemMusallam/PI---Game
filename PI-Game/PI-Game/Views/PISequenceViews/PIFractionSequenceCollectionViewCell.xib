@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-ExtraBold.ttf">
+            <string>Inter-ExtraBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" restorationIdentifier="PIFractionCollectionViewCell" reuseIdentifier="PIFractionSequenceCollectionViewCell" id="gTV-IL-0wX" customClass="PIFractionSequenceCollectionViewCell" customModule="PI_Game" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="34" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="34" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRo-6t-nTC">
+                        <rect key="frame" x="0.0" y="0.0" width="34" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="9pL-3n-lJn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="50"/>
+                        <color key="textColor" name="Dark-Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-ay-DTO">
+                        <rect key="frame" x="0.0" y="55" width="34" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="5uH-Gz-JqG"/>
+                            <constraint firstAttribute="height" constant="50" id="BVj-nx-KKn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Inter-ExtraBold" family="Inter" pointSize="14"/>
+                        <color key="textColor" name="Dark-Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="Light-Color"/>
+            <constraints>
+                <constraint firstItem="LRo-6t-nTC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7f3-wj-86b"/>
+                <constraint firstItem="O2F-ay-DTO" firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" id="G8F-pM-EKj"/>
+                <constraint firstItem="O2F-ay-DTO" firstAttribute="top" secondItem="LRo-6t-nTC" secondAttribute="bottom" constant="5" id="O1X-Ti-n6N"/>
+                <constraint firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" id="Uup-fM-stK"/>
+                <constraint firstItem="O2F-ay-DTO" firstAttribute="leading" secondItem="LRo-6t-nTC" secondAttribute="leading" id="dC6-X6-DjU"/>
+                <constraint firstItem="LRo-6t-nTC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ku2-Vb-bE7"/>
+            </constraints>
+            <size key="customSize" width="34" height="50"/>
+            <connections>
+                <outlet property="fractionNumber" destination="LRo-6t-nTC" id="JwU-KQ-udz"/>
+                <outlet property="fractionNumberingLable" destination="O2F-ay-DTO" id="8ei-tR-LiQ"/>
+            </connections>
+            <point key="canvasLocation" x="27.480916030534349" y="19.366197183098592"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Dark-Color">
+            <color red="0.22699999809265137" green="0.20800000429153442" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Light-Color">
+            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

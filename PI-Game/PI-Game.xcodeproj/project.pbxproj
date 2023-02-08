@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		5B57A3E5299282D40026B9FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3E4299282D40026B9FB /* SplashViewController.swift */; };
 		5B57A3E72992933A0026B9FB /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3E62992933A0026B9FB /* helpers.swift */; };
+		5B57A3EB2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3E92992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift */; };
+		5B57A3EC2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B57A3EA2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.xib */; };
+		5B57A3F92992E8F00026B9FB /* FrationDigitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3F82992E8F00026B9FB /* FrationDigitsModel.swift */; };
 		5B8097722991CC77007A3F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8097712991CC77007A3F51 /* AppDelegate.swift */; };
 		5B8097742991CC77007A3F51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8097732991CC77007A3F51 /* SceneDelegate.swift */; };
-		5B8097762991CC77007A3F51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8097752991CC77007A3F51 /* ViewController.swift */; };
+		5B8097762991CC77007A3F51 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8097752991CC77007A3F51 /* MainViewController.swift */; };
 		5B8097792991CC77007A3F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8097772991CC77007A3F51 /* Main.storyboard */; };
 		5B80977B2991CC78007A3F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B80977A2991CC78007A3F51 /* Assets.xcassets */; };
 		5B80977E2991CC78007A3F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B80977C2991CC78007A3F51 /* LaunchScreen.storyboard */; };
@@ -22,10 +25,22 @@
 /* Begin PBXFileReference section */
 		5B57A3E4299282D40026B9FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5B57A3E62992933A0026B9FB /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
+		5B57A3E92992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIFractionSequenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B57A3EA2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PIFractionSequenceCollectionViewCell.xib; sourceTree = "<group>"; };
+		5B57A3EE2992E6B50026B9FB /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		5B57A3EF2992E6B50026B9FB /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		5B57A3F02992E6B50026B9FB /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		5B57A3F12992E6B50026B9FB /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		5B57A3F22992E6B50026B9FB /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		5B57A3F32992E6B50026B9FB /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		5B57A3F42992E6B50026B9FB /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		5B57A3F52992E6B50026B9FB /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5B57A3F62992E6D00026B9FB /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		5B57A3F82992E8F00026B9FB /* FrationDigitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrationDigitsModel.swift; sourceTree = "<group>"; };
 		5B80976E2991CC77007A3F51 /* PI-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PI-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8097712991CC77007A3F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8097732991CC77007A3F51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B8097752991CC77007A3F51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B8097752991CC77007A3F51 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B8097782991CC77007A3F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B80977A2991CC78007A3F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B80977D2991CC78007A3F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +68,47 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		5B57A3E82992E40D0026B9FB /* PISequenceViews */ = {
+			isa = PBXGroup;
+			children = (
+				5B57A3E92992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift */,
+				5B57A3EA2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.xib */,
+			);
+			path = PISequenceViews;
+			sourceTree = "<group>";
+		};
+		5B57A3ED2992E51E0026B9FB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5B57A3F62992E6D00026B9FB /* Inter-Black.ttf */,
+				5B57A3F12992E6B50026B9FB /* Inter-Bold.ttf */,
+				5B57A3EF2992E6B50026B9FB /* Inter-ExtraBold.ttf */,
+				5B57A3F52992E6B50026B9FB /* Inter-ExtraLight.ttf */,
+				5B57A3F32992E6B50026B9FB /* Inter-Light.ttf */,
+				5B57A3F02992E6B50026B9FB /* Inter-Medium.ttf */,
+				5B57A3F22992E6B50026B9FB /* Inter-Regular.ttf */,
+				5B57A3EE2992E6B50026B9FB /* Inter-SemiBold.ttf */,
+				5B57A3F42992E6B50026B9FB /* Inter-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5B57A3F72992E8D10026B9FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B57A3F82992E8F00026B9FB /* FrationDigitsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5B57A3FA29930A1C0026B9FB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5B8097752991CC77007A3F51 /* MainViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		5B8097652991CC77007A3F51 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +128,7 @@
 		5B8097702991CC77007A3F51 /* PI-Game */ = {
 			isa = PBXGroup;
 			children = (
+				5B57A3F72992E8D10026B9FB /* Models */,
 				5B80978B2991D101007A3F51 /* Services */,
 				5B8097882991CD32007A3F51 /* Application */,
 				5B8097872991CCE1007A3F51 /* Resources */,
@@ -85,8 +142,8 @@
 		5B8097852991CCC3007A3F51 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B57A3FA29930A1C0026B9FB /* Core */,
 				5B57A3E3299282B90026B9FB /* General */,
-				5B8097752991CC77007A3F51 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +151,7 @@
 		5B8097862991CCD3007A3F51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B57A3E82992E40D0026B9FB /* PISequenceViews */,
 				5B8097772991CC77007A3F51 /* Main.storyboard */,
 				5B80977C2991CC78007A3F51 /* LaunchScreen.storyboard */,
 			);
@@ -103,6 +161,7 @@
 		5B8097872991CCE1007A3F51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5B57A3ED2992E51E0026B9FB /* Fonts */,
 				5B80977A2991CC78007A3F51 /* Assets.xcassets */,
 				5B8097892991CDD0007A3F51 /* PI.txt */,
 				5B57A3E62992933A0026B9FB /* helpers.swift */,
@@ -187,6 +246,7 @@
 			files = (
 				5B80977E2991CC78007A3F51 /* LaunchScreen.storyboard in Resources */,
 				5B80978A2991CDD0007A3F51 /* PI.txt in Resources */,
+				5B57A3EC2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.xib in Resources */,
 				5B80977B2991CC78007A3F51 /* Assets.xcassets in Resources */,
 				5B8097792991CC77007A3F51 /* Main.storyboard in Resources */,
 			);
@@ -199,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B57A3EB2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift in Sources */,
 				5B80978D2991D18B007A3F51 /* OfflineServices.swift in Sources */,
-				5B8097762991CC77007A3F51 /* ViewController.swift in Sources */,
+				5B8097762991CC77007A3F51 /* MainViewController.swift in Sources */,
+				5B57A3F92992E8F00026B9FB /* FrationDigitsModel.swift in Sources */,
 				5B8097722991CC77007A3F51 /* AppDelegate.swift in Sources */,
 				5B8097742991CC77007A3F51 /* SceneDelegate.swift in Sources */,
 				5B57A3E5299282D40026B9FB /* SplashViewController.swift in Sources */,
