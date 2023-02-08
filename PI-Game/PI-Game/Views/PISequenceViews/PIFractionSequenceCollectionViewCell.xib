@@ -44,7 +44,6 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" name="Light-Color"/>
             <constraints>
                 <constraint firstItem="LRo-6t-nTC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7f3-wj-86b"/>
                 <constraint firstItem="O2F-ay-DTO" firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" id="G8F-pM-EKj"/>
@@ -64,9 +63,6 @@
     <resources>
         <namedColor name="Dark-Color">
             <color red="0.22699999809265137" green="0.20800000429153442" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Light-Color">
-            <color red="0.85100001096725464" green="0.85100001096725464" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
