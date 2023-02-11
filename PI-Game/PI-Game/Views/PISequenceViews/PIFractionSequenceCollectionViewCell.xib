@@ -23,7 +23,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRo-6t-nTC">
-                        <rect key="frame" x="0.0" y="0.0" width="34" height="50"/>
+                        <rect key="frame" x="5" y="5" width="24" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="9pL-3n-lJn"/>
                         </constraints>
@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2F-ay-DTO">
-                        <rect key="frame" x="0.0" y="55" width="34" height="50"/>
+                        <rect key="frame" x="5" y="60" width="29" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="5uH-Gz-JqG"/>
                             <constraint firstAttribute="height" constant="50" id="BVj-nx-KKn"/>
@@ -45,19 +45,19 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="LRo-6t-nTC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7f3-wj-86b"/>
-                <constraint firstItem="O2F-ay-DTO" firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" id="G8F-pM-EKj"/>
+                <constraint firstItem="LRo-6t-nTC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="7f3-wj-86b"/>
+                <constraint firstItem="O2F-ay-DTO" firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" constant="5" id="G8F-pM-EKj"/>
                 <constraint firstItem="O2F-ay-DTO" firstAttribute="top" secondItem="LRo-6t-nTC" secondAttribute="bottom" constant="5" id="O1X-Ti-n6N"/>
-                <constraint firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" id="Uup-fM-stK"/>
+                <constraint firstAttribute="trailing" secondItem="LRo-6t-nTC" secondAttribute="trailing" constant="5" id="Uup-fM-stK"/>
                 <constraint firstItem="O2F-ay-DTO" firstAttribute="leading" secondItem="LRo-6t-nTC" secondAttribute="leading" id="dC6-X6-DjU"/>
-                <constraint firstItem="LRo-6t-nTC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ku2-Vb-bE7"/>
+                <constraint firstItem="LRo-6t-nTC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ku2-Vb-bE7"/>
             </constraints>
             <size key="customSize" width="34" height="50"/>
             <connections>
                 <outlet property="fractionNumber" destination="LRo-6t-nTC" id="JwU-KQ-udz"/>
                 <outlet property="fractionNumberingLable" destination="O2F-ay-DTO" id="8ei-tR-LiQ"/>
             </connections>
-            <point key="canvasLocation" x="27.480916030534349" y="19.366197183098592"/>
+            <point key="canvasLocation" x="27.480916030534349" y="19.014084507042256"/>
         </collectionViewCell>
     </objects>
     <resources>

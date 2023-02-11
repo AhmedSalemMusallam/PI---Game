@@ -7,6 +7,11 @@
 
 import Foundation
 
+class OfflineServices
+{
+    public static var PIDigits : String? = readPIFile()
+
+}
 
 func readPIFile() -> String?{
     var PITXT:String?
