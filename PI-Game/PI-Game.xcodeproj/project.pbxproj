@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B3681472997B0ED0098CDF4 /* GameFinisedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681462997B0ED0098CDF4 /* GameFinisedViewController.swift */; };
+		5B3681492997C4C10098CDF4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3681482997C4C10098CDF4 /* SettingsViewController.swift */; };
 		5B57A3E5299282D40026B9FB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3E4299282D40026B9FB /* SplashViewController.swift */; };
 		5B57A3E72992933A0026B9FB /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3E62992933A0026B9FB /* helpers.swift */; };
 		5B57A3EB2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57A3E92992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		5B3681462997B0ED0098CDF4 /* GameFinisedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinisedViewController.swift; sourceTree = "<group>"; };
+		5B3681482997C4C10098CDF4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5B57A3E4299282D40026B9FB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5B57A3E62992933A0026B9FB /* helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		5B57A3E92992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIFractionSequenceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				5B3681452997B0B70098CDF4 /* CustomPopUps */,
 				5B8097752991CC77007A3F51 /* MainViewController.swift */,
+				5B3681482997C4C10098CDF4 /* SettingsViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				5B57A3EB2992E4B40026B9FB /* PIFractionSequenceCollectionViewCell.swift in Sources */,
 				5B80978D2991D18B007A3F51 /* OfflineServices.swift in Sources */,
 				5B8097762991CC77007A3F51 /* MainViewController.swift in Sources */,
+				5B3681492997C4C10098CDF4 /* SettingsViewController.swift in Sources */,
 				5B57A3F92992E8F00026B9FB /* FrationDigitsModel.swift in Sources */,
 				5B8097722991CC77007A3F51 /* AppDelegate.swift in Sources */,
 				5B3681472997B0ED0098CDF4 /* GameFinisedViewController.swift in Sources */,

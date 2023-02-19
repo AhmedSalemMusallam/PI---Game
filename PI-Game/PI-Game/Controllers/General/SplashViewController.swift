@@ -25,7 +25,7 @@ class SplashViewController: UIViewController {
     private func animateLogo()
     {
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
             //Vertical Shaking
             UIView.animate(withDuration: 0.4, animations: {
                 self.logoIcon.shake_vertical()

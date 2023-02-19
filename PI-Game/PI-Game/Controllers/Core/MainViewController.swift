@@ -28,6 +28,15 @@ class MainViewController: UIViewController {
     var count:Int = 0
     var timingCounting:Bool = false
     
+    //Mark:- Settings Icon outlet
+    @IBOutlet weak var settingButton: UIButton!
+    //Mark:- Settings Icon Action
+    
+    @IBAction func settingButtonAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "showSettings", sender: nil)
+    }
+    
+    
     //Mark:- numbers OutLets
     @IBOutlet weak var numberOneBtn: UIButton!
     @IBOutlet weak var numbertwoBtn: UIButton!
