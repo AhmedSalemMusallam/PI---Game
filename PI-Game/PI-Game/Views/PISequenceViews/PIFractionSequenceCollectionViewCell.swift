@@ -87,8 +87,7 @@ class PIFractionSequenceCollectionViewCell: UICollectionViewCell {
             
             if String(currentUserChoice) != String(PIDigitCharacters[index-1])
             {
-                //fire score custom modal
-                MainViewController.flag = true
+                
                 
                 self.coloringLastElement(index: index)
                 
@@ -96,10 +95,10 @@ class PIFractionSequenceCollectionViewCell: UICollectionViewCell {
                     self.fractionNumber.text = String(PIDigitCharacters[index-1])
                 }
                 
-                
+                //Fire the error Event
                 self.fireErrorEvent()
-                MainViewController.currentScore = " \(MainViewController.userChoices.count) digits in \(MainViewController.globalTimeString)"
-                // fill the sequence with the correct numbers
+                
+               
                 
             }else{
                 self.coloringElements(index: index)

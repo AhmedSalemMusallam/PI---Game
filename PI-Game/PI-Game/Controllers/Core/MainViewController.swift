@@ -14,8 +14,17 @@ class MainViewController: UIViewController {
     public static var bestScore:String = ""
     public static var globalTimeString:String = "00 : 00 : 00"
     public static var currentScore:String = ""
+    
     //Mark:- user choices array
     public static var userChoices:[Int?] = []
+    
+    //Mark:- pi model declaration
+    public static var PIDigitsModels = [PIDigitsModel]()
+    
+    
+    //Mark:- fraction numbers array
+    public static var fractionNumbers:[Int] = []
+    
     
     //Mark:- Pi Collection View
     @IBOutlet weak var PICollectionView: UICollectionView!
@@ -59,7 +68,8 @@ class MainViewController: UIViewController {
         fireTimer()
         //reload collection view data source
         PICollectionView.reloadData()
-        
+        //fire Popup Event
+        firePopupEvent()
     }
     
     @IBAction func numberTwoBtnTouchUpInsideAction(_ sender: UIButton) {
@@ -69,6 +79,8 @@ class MainViewController: UIViewController {
         readNumber(number: 2)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     @IBAction func numberThreeBtnTouchUpInsideAction(_ sender: UIButton) {
@@ -78,6 +90,8 @@ class MainViewController: UIViewController {
         readNumber(number: 3)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     
@@ -88,6 +102,8 @@ class MainViewController: UIViewController {
         readNumber(number: 4)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     
@@ -98,6 +114,8 @@ class MainViewController: UIViewController {
         readNumber(number: 5)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     @IBAction func numberSixBtnTouchUpInsideAction(_ sender: UIButton) {
@@ -107,6 +125,8 @@ class MainViewController: UIViewController {
         readNumber(number: 6)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     
@@ -117,6 +137,8 @@ class MainViewController: UIViewController {
         readNumber(number: 7)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     
@@ -127,6 +149,8 @@ class MainViewController: UIViewController {
         readNumber(number: 8)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     
@@ -137,6 +161,8 @@ class MainViewController: UIViewController {
         readNumber(number: 9)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
     @IBAction func numberZeroBtnTouchUpInsideAction(_ sender: UIButton) {
@@ -146,41 +172,17 @@ class MainViewController: UIViewController {
         readNumber(number: 0)
         //reload collection view data source
         PICollectionView.reloadData()
+        //fire Popup Event
+        firePopupEvent()
     }
     
-    //Mark:- pi model declaration
-    var PIDigitsModels = [PIDigitsModel]()
     
-    
-    //Mark:- fraction numbers array
-    var fractionNumbers:[Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //unwraping the file string
-        guard let PIDigitString : String = OfflineServices.PIDigits else { return }
         
-        //add empty space at the begining
-        PIDigitsModels.append(PIDigitsModel(digitValue: " ",digitIndex: " "))
-        for (index, char) in PIDigitString.enumerated()
-        {
-            if index == 0 || index == 1
-            {
-                //filling the model with pi digits
-                PIDigitsModels.append(PIDigitsModel(digitValue: String(char),digitIndex: " "))
-            }else{
-                
-                //Default Filling
-                //filling the model with pi digits
-                PIDigitsModels.append(PIDigitsModel(digitValue: "  ",digitIndex: String(index-1)))
-                if let number = Int(String(char)) {
-                    fractionNumbers.append(number)
-                }
-                
-            }
-            
-        }
         
+        MainViewController.resetData()
         
         //collection view delegate and datasource
         PICollectionView.delegate = self
@@ -191,6 +193,35 @@ class MainViewController: UIViewController {
         
        
        
+    }
+    
+   
+    
+    public static func resetData()
+    {
+        //unwraping the file string
+        guard let PIDigitString : String = OfflineServices.PIDigits else { return }
+        
+        //add empty space at the begining
+        MainViewController.PIDigitsModels.append(PIDigitsModel(digitValue: " ",digitIndex: " "))
+        for (index, char) in PIDigitString.enumerated()
+        {
+            if index == 0 || index == 1
+            {
+                //filling the model with pi digits
+                MainViewController.PIDigitsModels.append(PIDigitsModel(digitValue: String(char),digitIndex: " "))
+            }else{
+                
+                //Default Filling
+                //filling the model with pi digits
+                MainViewController.PIDigitsModels.append(PIDigitsModel(digitValue: "  ",digitIndex: String(index-1)))
+                if let number = Int(String(char)) {
+                    fractionNumbers.append(number)
+                }
+                
+            }
+            
+        }
     }
 
     //Mark:- fading effect function
@@ -209,14 +240,14 @@ extension MainViewController : UICollectionViewDelegate, UICollectionViewDataSou
 {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return PIDigitsModels.count
+        return MainViewController.PIDigitsModels.count
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = PICollectionView.dequeueReusableCell(withReuseIdentifier: PIFractionSequenceCollectionViewCell.identifier, for: indexPath) as? PIFractionSequenceCollectionViewCell else { return UICollectionViewCell() }
-        cell.configure(with: PIDigitsModels[indexPath.row])
+        cell.configure(with: MainViewController.PIDigitsModels[indexPath.row])
         
         //Mark:- Update the view
         cell.updateView(index: indexPath.row)
@@ -300,47 +331,97 @@ extension MainViewController
     
 }
 
-extension MainViewController
-{
+extension MainViewController{
     
     //Mark:- read number from the user
     func readNumber(number: Int){
         MainViewController.userChoices.append(number)
     }
+    
+    //Fire popup event
+    func firePopupEvent()
+    {
+        //unwraping the file string
+        guard let PIDigitString : String = OfflineServices.PIDigits else { return }
+        
+        let PIDigitCharacters = Array(PIDigitString)
+        
+        guard let lastUserChoice = MainViewController.userChoices.last else {
+            print("Last User Choice is null here")
+            return }
+        
+      
+        
+        if String(lastUserChoice!) != String(PIDigitCharacters[MainViewController.userChoices.count + 1])
+        {
+            
+            
+            //stop timer
+            stopTimer()
+
+            // Calculate the current price
+            MainViewController.currentScore = " \(MainViewController.userChoices.count - 1 ) digits in \(MainViewController.globalTimeString)"
+
+            
+
+
+            //Calculate the best score
+            if SceneDelegate.userData.integer(forKey: "BestScore") == 0
+            {
+                SceneDelegate.userData.set(MainViewController.userChoices.count - 1, forKey: "BestScore")
+            }else if(SceneDelegate.userData.integer(forKey: "BestScore") <= MainViewController.userChoices.count - 1 )
+            {
+                SceneDelegate.userData.set(MainViewController.userChoices.count - 1, forKey: "BestScore")
+            }
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                
+                
+                //resetting the Game
+                MainViewController.globalTimeString = "00 : 00 : 00"
+                self.timeLable.text = MainViewController.globalTimeString
+                MainViewController.userChoices = []
+                MainViewController.fractionNumbers = []
+                MainViewController.PIDigitsModels = [PIDigitsModel]()
+                //reset view
+                MainViewController.resetData()
+                
+                self.PICollectionView.reloadData()
+                
+                //perfrom the segue
+                self.performSegue(withIdentifier: "ShowGameOverSheet", sender: nil)
+            }
+            
+           
+            
+            
+            
+            
+            
+        }
+
+    }
+    
 }
 
-extension MainViewController{
-    //Mark:- Controlling SubViews
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        if MainViewController.flag
-        {
-            fireBottomCustomViews()
-            stopTimer()
-        }
+extension MainViewController
+{
+    //Mark:- Event for passing value through segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier
+//        {
+//        case "ShowGameOverSheet":
+//            let destinationVC = segue.destination as? GameFinisedViewController
+//
+//
+//
+//        default:
+//            print("Error Happend")
+//        }
+
     }
-    
-    //Mark:- setup the game finished popup
-    func fireBottomCustomViews()
-    {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "GameFinisedViewController")
-
-        if let sheet = secondVC.sheetPresentationController{
-
-            sheet.preferredCornerRadius = 40
-
-            sheet.detents = [.custom(resolver: {
-                context in
-                0.6 * context.maximumDetentValue
-            }), .large()]
-
-        }
-        
-        present(secondVC, animated: true)
-    }
-    
-    
 }
 
 

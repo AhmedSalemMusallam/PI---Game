@@ -9,6 +9,8 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    public static var userData = UserDefaults.standard
+    
     var window: UIWindow?
 
 

@@ -260,6 +260,7 @@
                         <outlet property="settingButton" destination="ohY-YN-UJP" id="0iI-j2-xQh"/>
                         <outlet property="timeLable" destination="kYh-4L-3f7" id="2ux-LC-Wll"/>
                         <segue destination="FfL-hU-WjW" kind="show" identifier="showSettings" id="14e-Qw-jBE"/>
+                        <segue destination="EU9-HI-aO8" kind="show" identifier="ShowGameOverSheet" id="Zxd-Ei-atw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -335,7 +336,7 @@
             <objects>
                 <viewController storyboardIdentifier="GameFinisedViewController" id="EU9-HI-aO8" customClass="GameFinisedViewController" customModule="PI_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bSu-Pz-77d">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RN-jf-4O6">
@@ -373,6 +374,9 @@
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" name="Light-Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="restartAction:" destination="EU9-HI-aO8" eventType="touchUpInside" id="7EI-2g-lDH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSc-nS-Fbe">
                                 <rect key="frame" x="100" y="363" width="193" height="50"/>
@@ -385,6 +389,9 @@
                                 <state key="normal" title="Continue ">
                                     <color key="titleColor" name="Light-Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="continueAction:" destination="EU9-HI-aO8" eventType="touchUpInside" id="ROO-kS-OcB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWR-DY-YS8">
                                 <rect key="frame" x="100" y="433" width="193" height="50"/>
@@ -397,6 +404,9 @@
                                 <state key="normal" title="Jump To">
                                     <color key="titleColor" name="Light-Color"/>
                                 </state>
+                                <connections>
+                                    <action selector="jumpTo:" destination="EU9-HI-aO8" eventType="touchUpInside" id="ut3-9O-4H4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YQV-Kj-E3x"/>
@@ -421,6 +431,7 @@
                             <constraint firstItem="YQV-Kj-E3x" firstAttribute="trailing" secondItem="u5W-oB-A9K" secondAttribute="trailing" constant="100" id="vJT-XW-C0N"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aZB-t0-JG2"/>
                     <connections>
                         <outlet property="bestScoreValue" destination="nns-BA-zCr" id="9yh-0s-w3s"/>
                         <outlet property="continueButton" destination="QSc-nS-Fbe" id="CxK-C3-rgh"/>
@@ -431,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyB-Xi-use" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.3969465648854" y="646.47887323943667"/>
+            <point key="canvasLocation" x="1615" y="805"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="K4h-as-dET">
